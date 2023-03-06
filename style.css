@@ -8,133 +8,117 @@
 }
 
 nav{
-    top: 0;
-    position: fixed;
-    background-color: black;
-    color: blueviolet;
-    font-size: 1.5rem;
+    display: flex;
     height: 80px;
     width: 100%;
-    display: flex;
+    position: fixed;
+    top: 0;
     justify-content: space-between;
+    background-color: black;
     align-items: center;
 }
 
-nav a:hover{
-    color: aliceblue
-}
-
-nav label img{
+nav img{
     height: 80px;
-    margin-left: 10px;  
-}
-
-nav ul{
-    margin-right: 50px;
 }
 
 nav li{
-    margin: 1rem ;
     float: left;
+    margin: 1rem;
+}
+
+nav li a{
+    color: blueviolet;
 }
 
 .container{
-    margin-top: 80px;
-    display: flex;
-    background-color: aquamarine;
-    width: 100%;
-    height: 100vh;
-    padding: 1rem;
-    flex-direction: row-reverse;
-}
-
-.container-aside{
-    display: flex;
-    width: 25%;
-    justify-content: center;
-    text-align: center;
-}
-
-.container-main{
-    display: flex;
-    width: 75%;
-    height: 100vh;
-    flex-wrap: wrap;
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
     gap: 20px;
-    justify-content: space-around;
+    height: 100vh;
 }
 
-.container-main h2{
-    width: 100%;
+.container .container-main{
+    display: grid;
+    grid-column: 1/3;
+    margin: 0px 0px 0px 1rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 80px repeat(3,1fr);
+    gap: 20px;
+}
+
+.container .container-main h2{
     text-align: center;
+    grid-column: 1/3;
 }
 
-.card{
-    border-radius: 10px;
-}
-
-.texto{
+.container .container-main .card .texto{
     display: flex;
-    height: 100%;
-    margin-left: 1rem;
-    /*Column para que el texto se ponga uno debajo del otro 
-    Space-between para que se separen a lo alto y quede el h4 arriba y el p debajo*/
+    height: 90%;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0px 0px 0px 0.5rem;
 }
 
-.card1{
-    width: 33.3%;
-    height: 25%;
-    background-color: red;
+.container .container-main .card{
+    /*Asi puedo ajustar la imagen de fondo al tamano del div.
+    Podria usar background-position: center; para centrar la imagen pero la foto del mondongo a la espanola no queda bien centrada.*/
+    background-size: cover;
+    border-radius: 20px;
 }
 
-.card2{
-    width: 33.3%;
-    height: 25%;
-    background-color: green;
+.container .container-main .card1{
+    color: aliceblue;
 }
 
-.card3{
-    width: 33.3%;
-    height: 25%;
-    background-color: gray;
+.container .container-aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card4{
-    width: 33.3%;
-    height: 25%;
-    background-color: blueviolet;
-}
-
-.card5{
-    width: 33.3%;
-    height: 25%;
-    background-color: blue;
-}
-
-.card6{
-    width: 33.3%;
-    height: 25%;
-    background-color: yellowgreen;
-}
-
-@media (max-width: 600px){
-    .container{
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container-aside{
-        border-bottom: 1px black solid;
-    }
-
-    .card{
-        width: 100%;
-    }
-
+@media screen and (max-width:843px){
     nav ul{
-        display: none;       
+        /*Estilo provisorio hasta que aprenda a usar el logo de nautico o insertar un boton para desplegar el navbar en un menu vertical scrolleable. (Podria usar display: none; para ocutarlo momentaneamente.)*/
+            font-size: 10px;
+    }
+
+    .container{
+        /*Creo dos filas en la grilla para poder posicionar el plato del dia(container-aside) por encima de los platos referentes (container-main).
+        Si quisiera hacer el div del plato del dia mas chico lo establezcon px y luego el otro con fr.*/
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    .container .container-aside{
+        display: flex;
+        justify-content: center;
+        grid-column:1/4;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .container .container-main{
+        /*Primer fila de 40px para el titulo 'Nuestros platos referentes' y 6 filas que ocupen una fraccion del espacio restante para cada una de las seis cartas.*/
+        grid-template-rows: 40px repeat(6,1fr);
+        grid-template-columns: repeat(1,1fr);
+        grid-column: 1/4;
+        gap: 10px;
+        /*Redundante ya que container aside se especifica de fila 1 a 2
+        sobreentendiendo que esta se posicionara debajo en la segunda fila de 2 a 3.
+        grid-row: 2/3;*/
+    }
+
+    .container .container-main h2{
+        text-align: center;
+    }
+
+    .container .container-main .card{
+        grid-column: 1/-1;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        text-align: center ;
     }
 }

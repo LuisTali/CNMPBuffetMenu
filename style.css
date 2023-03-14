@@ -7,6 +7,22 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+body{
+    overflow-y: scroll;
+}
+/*Permite el scroll en el eje Y y quito la barra de scroll de la vista.*/
+::-webkit-scrollbar{
+    display: none;
+}
+
+.isInactive{
+    /*Si seteo opacity a 0 desaparezco la vista y con pointer-events en none deshabilito todos los items clickeables como inputs botones y demas */
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
 nav{    
     display: flex;
     height: 80px;
@@ -58,6 +74,8 @@ nav li a:hover{
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 80px repeat(3,1fr);
     gap: 20px;
+    /*Fijarme como hacer linea del borde mas cortita*/
+    border-right: 1px solid black;
 }
 
 .container .container-main h2{
@@ -78,6 +96,8 @@ nav li a:hover{
     Podria usar background-position: center; para centrar la imagen pero la foto del mondongo a la espanola no queda bien centrada.*/
     background-size: cover;
     border-radius: 20px;
+    box-shadow: 0px 3px 3px  black;
+    margin-right: 16px;
 }
 
 .container .container-main .card1{
@@ -88,6 +108,16 @@ nav li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+button{
+    margin: 10px 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.editInfo{
+    position: relative;
 }
 
 @media screen and (max-width:843px){
@@ -116,6 +146,7 @@ nav li a:hover{
         grid-template-columns: repeat(1,1fr);
         grid-column: 1/4;
         gap: 10px;
+        border: 0px;
         /*Redundante ya que container aside se especifica de fila 1 a 2
         sobreentendiendo que esta se posicionara debajo en la segunda fila de 2 a 3.
         grid-row: 2/3;*/

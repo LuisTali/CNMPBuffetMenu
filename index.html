@@ -15,11 +15,11 @@
             <li><a href="#">HOME</a> </li>
             <li><a href="#">US</a> </li>                
             <li><a href="#">CONTACT</a> </li>
-            <li><a href="#">EDITAR INFO</a> </li>
+            <li><a href="#" id="editInfo">EDITAR INFO</a> </li>
         </ul>    
     </nav>
 
-    <div class="container">
+    <div class="container" id="infoDiv">
         <div class="container-main">
             <h2>Nuestros platos Referentes</h2>
             <div class="card card1" style="background-image: url(/images/mondongo-a-la-espanola.jpg);">
@@ -65,5 +65,19 @@
                 <img src="#" alt="menu-del-dia">
         </div>
     </div>
+    <button class="">
+        <span>ORDER</span>
+    </button>
+    <div class="editInfo isInactive" id="editInfoDiv">
+        <h3>Editar Plato del Dia</h3>
+        <form action="#">
+            <div class="inputDiv">
+                <label for="">Plato del dia</label>
+                <input type="text" placeholder="nombre del plato del dia">
+            </div>
+            <button id="edit">EDIT</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -47,14 +47,15 @@ nav li{
 nav li a{
     display: flex;
     align-items: center;
-    color: blueviolet;
+    color: whitesmoke;
     height: 60px;
-    padding-left: 10px;
-    padding-right: 10px;   
+    /*padding: top left bottom right*/
+    padding: 0px 15px 0px 15px; 
+    font-weight: 500;
 }
 
 nav li a:hover{
-    background-color: gray;
+    background-color: rgb(44, 44, 44);
     border-radius: 20px;
 }
 
@@ -88,7 +89,8 @@ nav li a:hover{
     height: 90%;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0px 0px 0px 0.5rem;
+    margin: 8px 0px 0px 16px;
+    font-weight: 500;
 }
 
 .container .container-main .card{
@@ -100,8 +102,14 @@ nav li a:hover{
     margin-right: 16px;
 }
 
-.container .container-main .card1{
-    color: aliceblue;
+.container .container-main .card h4{
+    background-color: beige;
+    width: fit-content;
+}
+
+.container .container-main .card p{
+    background-color: beige;
+    width: fit-content;
 }
 
 .container .container-aside{
@@ -146,6 +154,7 @@ button{
         /*Creo dos filas en la grilla para poder posicionar el plato del dia(container-aside) por encima de los platos referentes (container-main).
         Si quisiera hacer el div del plato del dia mas chico lo establezcon px y luego el otro con fr.*/
         grid-template-rows: repeat(2,1fr);
+        overflow-y: scroll;
     }
 
     .container .container-aside{
@@ -161,7 +170,7 @@ button{
         grid-template-rows: 40px repeat(6,1fr);
         grid-template-columns: repeat(1,1fr);
         grid-column: 1/4;
-        gap: 10px;
+        gap: 20px;
         border: 0px;
         /*Redundante ya que container aside se especifica de fila 1 a 2
         sobreentendiendo que esta se posicionara debajo en la segunda fila de 2 a 3.
@@ -174,7 +183,7 @@ button{
 
     .container .container-main .card{
         grid-column: 1/-1;
-        height: 100px;
+        height: 400px;
         display: flex;
         justify-content: center;
         text-align: center ;

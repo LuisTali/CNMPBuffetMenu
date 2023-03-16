@@ -23,6 +23,7 @@ editBtn.addEventListener('click',() => {
     })
 }
 
+/*
 //Formas de declarar una funcion
 const suma = function(n1,n2){
     return n1 + n2;
@@ -44,4 +45,15 @@ console.log(dividir(4,2));
 
 //Con un solo parametro puedo omitir los parentesis.
 const saludar = nombre => 'Hola' + nombre;
-console.log(saludar('Luis'));
+console.log(saludar('Luis'));*/
+
+
+import {Plato} from '../Class/Plato.js'
+
+let p1 = new Plato('Mondongo','Mondongo a la espanola con papas',1500.00,1,'Carnes Rojas')
+
+console.log(p1.presentacion());
+
+p1.setPlatoDia(0);
+
+console.log(p1.presentacion());

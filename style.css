@@ -98,6 +98,7 @@ nav li a:hover{
     Podria usar background-position: center; para centrar la imagen pero la foto del mondongo a la espanola no queda bien centrada.*/
     background-size: cover;
     border-radius: 20px;
+    /*El primero es para la sombra del bottom y el otro para el efecto blur*/
     box-shadow: 0px 3px 3px  black;
     margin-right: 16px;
 }

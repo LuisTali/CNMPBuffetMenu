@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -18,8 +21,26 @@
             <li><a href="#" id="editInfo">EDITAR INFO</a> </li>
         </ul>    
     </nav>
-
+    <div class="opciones">
+        <ul class="categorias">
+            <li><a href="#">Entradas</a> </li>
+            <li><a href="#">Sandwich</a> </li>
+            <li><a href="#">Pescados y Mariscos</a> </li>
+            <li><a href="#">Pastas</a> </li>
+            <li><a href="#">Carnes Rojas</a> </li>
+            <li><a href="#">Carnes Blancas</a> </li>
+            <li><a href="#">Guarnicion</a> </li>
+            <li><a href="#">Ensaladas</a> </li>
+            <li><a href="#">Arroces</a> </li>
+            <li><a href="#">Postres</a> </li>
+            <li><a href="#">Cafeteria</a></li>
+            <li><a href="#">Bebidas</a></li>
+            <li><a href="#">Cervezas</a></li>
+            <li><a href="#">Menu Infantil</a></li>
+        </ul>
+    </div>
     <div class="container" id="infoDiv">
+
         <div class="container-main">
             <h2>Nuestros platos Referentes</h2>
             <div class="card card1" style="background-image: url(/images/mondongo-a-la-espanola.jpg);">
@@ -66,9 +87,11 @@
                 <img src="#" alt="menu-del-dia">
         </div>
     </div>
+
     <button class="">
         <span>ORDER</span>
     </button>
+
     <!--Seccion para editar el plato del dia-->
     <div class="editInfo isInactive" id="editInfoDiv">
         <h3>Editar Plato del Dia</h3>
@@ -81,6 +104,7 @@
             <button id="edit">EDIT</button>
         </form>
     </div>
+
     <script  type='module' src="Js/Scripts/script.js"></script>
 </body>
 </html>

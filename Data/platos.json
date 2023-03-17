@@ -1,0 +1,9 @@
+[
+    {
+        "idPlato": 1,
+        "nombre": "Tallarines",
+        "descripcion": "Tallarines con salsa a eleccion",
+        "precio": 900.00,
+        "platoDia": false
+    }
+]

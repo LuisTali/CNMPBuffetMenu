@@ -56,12 +56,46 @@ nav li a{
 
 nav li a:hover{
     background-color: rgb(44, 44, 44);
-    border-radius: 20px;
+    border: 3px solid whitesmoke;
+    border-radius: 15px;
+}
+
+.categorias{
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 100px;
+    z-index: -999;
+    width: 100%;
+    
+}
+
+.categorias li{
+    height: auto;
+    width: auto;
+}
+
+.categorias li a{
+    display: flex;
+    height: 50px;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
+    align-items: center; /*Al tener display flex, alinea el texto dentro de cada Li de la lista*/
+    white-space: nowrap; /*No corta el texto, haciendo que la categoria entre en linea recta*/
+    color: black;
+    font-weight: 500; /*Le doy mas peso a la letra, haciendola mas gruesa*/
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.categorias li a:hover{
+    color: whitesmoke;
+    background-color: rgb(3, 3, 126);
+    border-color: red;
 }
 
 .container{
     display: grid;
-    margin-top: 100px;
+    margin-top: 10px;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(1,1fr);
     gap: 20px;
@@ -117,6 +151,17 @@ nav li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
+    /*justify-content: center; Si elimino el comentario se posiciona justo en el medio del div*/
+}
+
+.container .container-aside #nombrePDia{
+    font-family: 'Dancing Script',cursive; /*Fuente para usar la integrada elegida en la pagina google fonts*/
+    font-size: 80px;
+}
+
+.container .container-aside #descripcionPDia{
+    font-size: 40px;
 }
 
 button{
@@ -146,16 +191,84 @@ button{
 }
 
 @media screen and (max-width:843px){
+    body{
+        overflow-y: scroll;
+    }
+    /*Permite el scroll en el eje Y y quito la barra de scroll de la vista.*/
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    
     nav ul{
-        /*Estilo provisorio hasta que aprenda a usar el logo de nautico o insertar un boton para desplegar el navbar en un menu vertical scrolleable. (Podria usar display: none; para ocutarlo momentaneamente.)*/
+        font-size: 10px;
+    }
+
+    .categorias{
+        overflow-x: scroll;
+        margin-top: 100px;
+        z-index: -999;
+    }
+
+    .categorias li{
+        height: auto;
+        width: auto;
+    }
+
+    .categorias li a{
+        display: flex;
+        height: 50px;
+        padding: 0px 10px 0px 10px;
+        margin: 0px 10px 0px 10px;
+        align-items: center; /*Al tener display flex, alinea el texto dentro de cada Li de la lista*/
+        white-space: nowrap; /*No corta el texto, haciendo que la categoria entre en linea recta*/
+        color: black;
+        font-weight: 500; /*Le doy mas peso a la letra, haciendola mas gruesa*/
+        border: 3px solid whitesmoke;
+        border-radius: 10px;
+    }
+
+    .categorias li a:hover{
+        color: whitesmoke;
+        background-color: rgb(3, 3, 126);
+        border-color: red;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-top: 750px;
+        z-index: -999;
+        /*z-index para que no superponga la navbar, position relative para */
+    }
+
+    .container .container-main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .container .container-main .card{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        text-align: center ;
+    }
+    
+    /*nav ul{
+        /*Estilo provisorio hasta que aprenda a usar el logo de nautico o insertar un boton para desplegar el navbar en un menu vertical scrolleable. (Podria usar display: none; para ocutarlo momentaneamente.)
             font-size: 10px;
     }
 
     .container{
         /*Creo dos filas en la grilla para poder posicionar el plato del dia(container-aside) por encima de los platos referentes (container-main).
-        Si quisiera hacer el div del plato del dia mas chico lo establezcon px y luego el otro con fr.*/
+        Si quisiera hacer el div del plato del dia mas chico lo establezcon px y luego el otro con fr.
         grid-template-rows: repeat(2,1fr);
-        overflow-y: scroll;
+        overflow-y: none;
+    }
+
+    .categorias{
+        overflow-x: scroll;
     }
 
     .container .container-aside{
@@ -167,7 +280,7 @@ button{
     }
 
     .container .container-main{
-        /*Primer fila de 40px para el titulo 'Nuestros platos referentes' y 6 filas que ocupen una fraccion del espacio restante para cada una de las seis cartas.*/
+        Primer fila de 40px para el titulo 'Nuestros platos referentes' y 6 filas que ocupen una fraccion del espacio restante para cada una de las seis cartas.
         grid-template-rows: 40px repeat(6,1fr);
         grid-template-columns: repeat(1,1fr);
         grid-column: 1/4;
@@ -175,7 +288,7 @@ button{
         border: 0px;
         /*Redundante ya que container aside se especifica de fila 1 a 2
         sobreentendiendo que esta se posicionara debajo en la segunda fila de 2 a 3.
-        grid-row: 2/3;*/
+        grid-row: 2/3;
     }
 
     .container .container-main h2{
@@ -189,4 +302,9 @@ button{
         justify-content: center;
         text-align: center ;
     }
+
+    button{
+        position: relative;
+        bottom: 0;
+    }*/
 }

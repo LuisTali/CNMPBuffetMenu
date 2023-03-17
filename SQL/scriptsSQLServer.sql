@@ -25,8 +25,7 @@ CREATE TABLE Categoria(
 
 ALTER TABLE Plato ADD idCategoria int NOT NULL CONSTRAINT fkPlato1 FOREIGN KEY REFERENCES Categoria(idCategoria);
 
-INSERT INTO Categoria VALUES ('Entradas'),('Sandwich'),('Pescados y Mariscos'),('Pastas'),('Carnes Rojas'),('Carnes Blancas'),
-('Guarnicion'),('Ensaladas'),('Arroces'),('Postres');
+INSERT INTO Categoria VALUES ('Entradas'),('Sandwich'),('Pescados y Mariscos'),('Pastas'),('Carnes Rojas'),('Carnes Blancas'),('Guarnicion'),('Ensaladas'),('Arroces'),('Postres');
 
 INSERT INTO Plato VALUES ('Mondongo a la espanola','Mondongo con morron, cebolla, chorizo y pimienta.',1500.00,default,5),
 ('Carne a la cacerola','Carne a la cacerola con pure o papas a la espanola',1400.00,default,5),

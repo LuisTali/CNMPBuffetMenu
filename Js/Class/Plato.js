@@ -1,4 +1,4 @@
-export  class Plato{
+export class Plato{
 
     constructor(nombre,descripcion,precio,platoDia,categoria){
         this.nombre = nombre

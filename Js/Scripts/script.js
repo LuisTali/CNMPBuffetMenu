@@ -31,19 +31,27 @@ editBtn.addEventListener('click',() => {
     mainDiv.classList.remove('isInactive');
     categoriesDiv.classList.remove('isInactive');
     editInfoDiv.classList.add('isInactive');
-
-    const pPlatoDia = document.getElementById('nombrePDia');
-    const dPlatoDia = document.getElementById('descripcionPDia');
     
-    console.log(dPlatoDia);
-    console.log(pPlatoDia);
     console.log(nombrePlatoDia + ', Nombre plato');
     console.log(descriptionPlatoDia + ', Descripcion plato');
 
-    pPlatoDia.innerHTML=nombrePlatoDia;
-    dPlatoDia.innerHTML = descriptionPlatoDia;
+    document.getElementById('nombrePDia').innerHTML=nombrePlatoDia;
+    document.getElementById('descripcionPDia').innerHTML = descriptionPlatoDia;
     }
 )
+
+function myFunctionName(){
+    let nombrePlatoDia = document.getElementById('inputPlatoDia').value;
+    const presentNombre = document.getElementById('presentacionNombre');
+    presentNombre.innerHTML = nombrePlatoDia;
+    
+}
+
+function myFunctionDesc(){
+    let descriptionPlatoDia = document.getElementById('descripcionPlatoDia').value;
+    const presentDescripcion = document.getElementById('presentacionDesc');
+    presentDescripcion.innerHTML = descriptionPlatoDia;
+}
 
 let p1 = new Plato('Mondongo','Mondongo a la espanola con papas',1500.00,1,'Carnes Rojas')
 

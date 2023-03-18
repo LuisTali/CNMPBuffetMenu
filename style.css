@@ -105,7 +105,7 @@ nav li a:hover{
 .container .container-main{
     display: grid;
     grid-column: 1/3;
-    margin: 0px 0px 0px 1rem;
+    margin: 10px 0px 0px 1rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 80px repeat(3,1fr);
     gap: 20px;
@@ -157,11 +157,14 @@ nav li a:hover{
 
 .container .container-aside #nombrePDia{
     font-family: 'Dancing Script',cursive; /*Fuente para usar la integrada elegida en la pagina google fonts*/
-    font-size: 80px;
+    font-size: 75px;
+    text-align: center;
 }
 
 .container .container-aside #descripcionPDia{
-    font-size: 40px;
+    font-size: 36px;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
 }
 
 button{
@@ -184,10 +187,18 @@ button{
     flex-direction: column;
     margin-bottom: 16px;
 }
+.editInfo h4{
+    font-family: 'Dancing Script',cursive;
+    font-size: 40px;
+}
 
 .editInfo #descripcionPlatoDia{
-    width: 90%;
-    
+    width: 90%;   
+}
+
+/*Al ser la linea que separa el plato del dia de las categorias en la version para moviles, en la version para pc no quiero que se visualice.*/
+#lineaMoviles{
+    display: none;
 }
 
 @media screen and (max-width:843px){
@@ -235,10 +246,12 @@ button{
 
     .container{
         display: flex;
+        height: 100%;
         flex-direction: column-reverse;
         width: 100%;
-        margin-top: 750px;
         z-index: -999;
+        margin-top: 16px;
+        /*border-top: 3px solid black;*/
         /*z-index para que no superponga la navbar, position relative para */
     }
 
@@ -253,6 +266,22 @@ button{
         display: flex;
         justify-content: center;
         text-align: center ;
+    }
+
+    .container .container-aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    #lineaMoviles{
+        display: inline;
+        height: 2px;
+        width: 80%;
+        margin-left: 10%;
+        /*width al 80% y margin left a la mitad del espacio restante en el div para que quede centrado*/
+        background-color: black;
     }
     
     /*Lo dejo porque me parece interesante como lo resolvi, luego lo borrare.

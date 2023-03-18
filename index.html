@@ -80,12 +80,14 @@
                 </div>
             </div>
         </div>
+
         <div class="container-aside">
                 <h2>Menu del Dia</h2>
                 <p id="nombrePDia">Nombre plato del dia</p>
                 <p id="descripcionPDia">Descripcion</p>
-                <img src="#" alt="menu-del-dia">
         </div>
+
+        <hr id="lineaMoviles">
     </div>
 
     <button class="">
@@ -98,10 +100,15 @@
         <form action="#">
             <div class="inputDiv">
                 <label for="">Plato del dia</label>
-                <input id="inputPlatoDia"type="text" placeholder="nombre del plato del dia">
+                <input id="inputPlatoDia"type="text" placeholder="nombre del plato del dia" onkeyup="myFunctionName()">
             </div>
-            <textarea name="" id="descripcionPlatoDia" cols="30" rows="10" placeholder="Descripcion del plato"></textarea>
+            <textarea name="" id="descripcionPlatoDia" cols="30" rows="10" placeholder="Descripcion del plato" onkeyup="myFunctionDesc()"></textarea>
             <button id="edit">EDIT</button>
+
+            <h3>Presentacion previa</h3>
+            <h4 id="presentacionNombre">Nombre plato dia</h4>
+            <p id="presentacionDesc">Descripcion plato dia</p>
+
         </form>
     </div>
 

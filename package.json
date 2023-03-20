@@ -1,0 +1,16 @@
+{
+  "name": "cnmpbuffetmenu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"node Js/Scripts/app.js",
+    "dev":"nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "type": "module"
+}

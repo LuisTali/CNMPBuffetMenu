@@ -196,6 +196,11 @@ button{
     width: 90%;   
 }
 
+.presentacionPrevia{
+    width: 100%;
+    text-align: center;
+}
+
 /*Al ser la linea que separa el plato del dia de las categorias en la version para moviles, en la version para pc no quiero que se visualice.*/
 #lineaMoviles{
     display: none;

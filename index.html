@@ -29,14 +29,14 @@
         <ul class="categorias">
             <li><a href="#">Entradas</a> </li>
             <li><a href="#">Sandwich</a> </li>
-            <li><a href="#">Pescados y Mariscos</a> </li>
+            <li><a href="#pescados">Pescados y Mariscos</a> </li>
             <li><a href="#">Pastas</a> </li>
             <li><a href="#">Carnes Rojas</a> </li>
             <li><a href="#">Carnes Blancas</a> </li>
             <li><a href="#">Guarnicion</a> </li>
             <li><a href="#">Ensaladas</a> </li>
             <li><a href="#">Arroces</a> </li>
-            <li><a href="#">Postres</a> </li>
+            <li><a href="#postres">Postres</a> </li>
             <li><a href="#">Cafeteria</a></li>
             <li><a href="#">Bebidas</a></li>
             <li><a href="#">Cervezas</a></li>
@@ -113,7 +113,7 @@
             </ul>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="pescados">
             <h3>Pescados y Mariscos</h3>
             <ul>
                 <!--value="idPlato" va a ser el id al plato asociado en la base de datos, el cual al cliquear el botton le envie el valor a Js para que este lo agregue al carrito y obtenga su info y calcule el subtotal.-->
@@ -145,7 +145,7 @@
             <h3>Arroces</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="postres">
             <h3>Postres</h3>
         </div>
         
@@ -178,14 +178,19 @@
                 <label for="">Plato del dia</label>
                 <input id="inputPlatoDia"type="text" placeholder="nombre del plato del dia" onkeyup="myFunctionName()">
             </div>
-            <textarea name="" id="descripcionPlatoDia" cols="30" rows="10" placeholder="Descripcion del plato" onkeyup="myFunctionDesc()"></textarea>
+            <textarea name="" id="descripcionPlatoDia" cols="30" rows="10" placeholder="Descripcion del plato" onkeyup=""></textarea>
+
+            <!--No se que tan mal esta colocar esto dentro de un form el cual no tiene mas utilidad que indicar que aqui se presenta un formulario, quizas al usar Node y actualizar el plato del dia eligiendolo desde un menu desplegable si necesite usar un Method en el form pero por ahora no-->
+            <div class="presentacionPrevia">
+                <h3>Presentacion previa</h3>
+                <h4 id="presentacionNombre">Nombre plato dia</h4>
+                <p id="presentacionDesc">Descripcion plato dia</p>
+            </div>
+            
             <button id="edit">EDIT</button>
 
-            <h3>Presentacion previa</h3>
-            <h4 id="presentacionNombre">Nombre plato dia</h4>
-            <p id="presentacionDesc">Descripcion plato dia</p>
-
         </form>
+    
     </div>
 
     <script  type='module' src="Js/Scripts/script.js"></script>

@@ -40,18 +40,18 @@ editBtn.addEventListener('click',() => {
     }
 )
 
-function myFunctionName(){
-    let nombrePlatoDia = document.getElementById('inputPlatoDia').value;
-    const presentNombre = document.getElementById('presentacionNombre');
-    presentNombre.innerHTML = nombrePlatoDia;
-    
-}
+let nombrePlatoDia = document.getElementById('inputPlatoDia');
+nombrePlatoDia.addEventListener('keyup',(event) => {
+    let inputText = nombrePlatoDia.value;
+    document.getElementById('presentacionNombre').innerHTML = inputText; 
+})
 
-function myFunctionDesc(){
-    let descriptionPlatoDia = document.getElementById('descripcionPlatoDia').value;
-    const presentDescripcion = document.getElementById('presentacionDesc');
-    presentDescripcion.innerHTML = descriptionPlatoDia;
-}
+let descripcionPDia = document.getElementById('descripcionPlatoDia');
+descripcionPDia.addEventListener('keyup',(event) => {
+    let inputText = document.getElementById('descripcionPlatoDia').value;
+    document.getElementById('presentacionDesc').innerHTML = inputText;
+})
+
 
 let p1 = new Plato('Mondongo','Mondongo a la espanola con papas',1500.00,1,'Carnes Rojas')
 

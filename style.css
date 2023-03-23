@@ -259,7 +259,7 @@ button{
     }
     
     nav ul{
-        font-size: 10px;
+        font-size: 0.8em;
     }
 
     .categorias{
@@ -328,6 +328,10 @@ button{
         align-items: center;
         justify-content: center;
         margin-top: 0px;
+        /*Por probar los bordes de cada esquina redondeados
+        background-color: rgb(184, 184, 184);
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;*/
     }
 
     #lineaMoviles{

@@ -93,6 +93,10 @@ nav li a:hover{
     border-color: red;
 }
 
+.categorias li a:active{
+    transition: all .5s;
+}
+
 .container{
     display: grid;
     margin-top: 10px;
@@ -137,14 +141,25 @@ nav li a:hover{
     margin-right: 16px;
 }
 
+.card1{background-position: 0px -50px;}
+.card2{background-position: 0px -200px;}
+.card3{background-position: 0px -190px;}
+.card5{background-position: 0px -100px;}
+
 .container .container-main .card h4{
     background-color: beige;
     width: fit-content;
+    padding: 0px 6px 0px 6px;
+    border-radius: 5px;
 }
 
 .container .container-main .card p{
-    background-color: beige;
+    /*El ultimo valor es alpha y especifica la opacidad del color de fondo*/
+    background-color: rgb(245, 245, 220, 0.5);
     width: fit-content;
+    padding: 0px 6px 0px 6px;
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 .container .container-aside{
@@ -234,7 +249,7 @@ button{
     align-items: center;
 }
 
-@media screen and (max-width:843px){
+@media screen and (max-width:414px){
     body{
         overflow-y: scroll;
     }
@@ -297,9 +312,16 @@ button{
     .container .container-main .card{
         height: 200px;
         display: flex;
-        justify-content: center;
         text-align: center ;
+        align-items: center;
+        /*background-position: center center; si descomento esta linea queda un diseño mas responsive, la comento ya que son platos preferentes los cuales dudo que se actualicen seguido, optando asi por posicionarlos manualmente*/
+        /*background-attachment: fixed; si descomento esta linea, las imagenes quedan fijas y al scrollear se mueven las tarjetas a medida que van recorriendo las imagenes, un efecto muy bueno a tener en cuenta pero debo achicar las imagenes un poco para no perder*/
     }
+
+    .card1{background-position: 0px -50px;}
+    .card2{background-position: 0px -200px;}
+    .card3{background-position: 0px -140px;}
+    .card5{background-position: 0px -100px;}
 
     .container .container-aside{
         display: flex;

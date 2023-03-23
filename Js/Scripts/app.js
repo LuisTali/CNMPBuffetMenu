@@ -52,6 +52,15 @@ descripcionPDia.addEventListener('keyup',(event) => {
     document.getElementById('presentacionDesc').innerHTML = inputText;
 })
 
+function scrollFunction1(){
+    let e = document.getElementById("pescados");
+        e.scrollIntoView({
+          block: 'start',
+          behavior: 'smooth',
+          inline: 'start'
+        });
+}
+
 
 let p1 = new Plato('Mondongo','Mondongo a la espanola con papas',1500.00,1,'Carnes Rojas')
 

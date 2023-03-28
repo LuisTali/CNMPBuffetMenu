@@ -28,12 +28,12 @@
     <div class="opciones">
         <ul class="categorias">
             <li><a href="#">Entradas</a> </li>
-            <li><a href="#">Sandwich</a> </li>
+            <li><a href="#sandwich">Sandwich</a> </li>
             <!--<li><button onclick="scrollFunction1()">Pescado</button></li>-->
-            <li><a href="#pescados">Pescados y Mariscos</a> </li>
+            <li><a href="#pescados y mariscos">Pescados y Mariscos</a> </li>
             <li><a href="#">Pastas</a> </li>
             <li><a href="#">Carnes Rojas</a> </li>
-            <li><a href="#">Carnes Blancas</a> </li>
+            <li><a href="#carnes blancas">Carnes Blancas</a> </li>
             <li><a href="#">Guarnicion</a> </li>
             <li><a href="#">Ensaladas</a> </li>
             <li><a href="#">Arroces</a> </li>
@@ -98,23 +98,20 @@
     <hr id="lineaMenuTextual">
 
     <div class="menu">
-        <div class="categoria">
-
-        </div>
         
         <div class="categoria">
             <h3>Entradas</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="sandwich">
             <h3>Sandwich</h3>
             <ul>
                 <!--value="idPlato" va a ser el id al plato asociado en la base de datos, el cual al cliquear el botton le envie el valor a Js para que este lo agregue al carrito y obtenga su info y calcule el subtotal.-->
-                <li><li><h4>Sandwich de Jamon crudo y Queso</h4> <button value="idPlato">$700 <img src="./Iconos/shoppingCart/apple-touch-icon.png" style="width: 24px; height: 24px;" alt=""></button></li></li>
+                <li><li><h4>Sandwich de Jamon crudo y Queso</h4> <button value="">$700 <img src="./Iconos/shoppingCart/apple-touch-icon.png" style="width: 24px; height: 24px;" alt=""></button></li></li>
             </ul>
         </div>
         
-        <div class="categoria" id="pescados">
+        <div class="categoria" id="pescados y mariscos">
             <h3>Pescados y Mariscos</h3>
             <ul>
                 <!--value="idPlato" va a ser el id al plato asociado en la base de datos, el cual al cliquear el botton le envie el valor a Js para que este lo agregue al carrito y obtenga su info y calcule el subtotal.-->
@@ -130,11 +127,11 @@
             <h3>Carnes Rojas</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="carnes blancas">
             <h3>Carnes Blancas</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="guarniciones">
             <h3>Guarnicion</h3>
         </div>
         

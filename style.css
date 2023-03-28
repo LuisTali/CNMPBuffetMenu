@@ -249,7 +249,14 @@ button{
     align-items: center;
 }
 
-@media screen and (max-width:414px){
+.categoria h3{
+    text-decoration:underline;
+    text-decoration-color: red;
+    color: rgb(0, 0, 113);
+    
+}
+
+@media screen and (max-width:829px){
     body{
         overflow-y: scroll;
     }
@@ -307,13 +314,15 @@ button{
         display: flex;
         flex-direction: column;
         margin-top: 50px;
+        align-items: center;
     }
 
     .container .container-main .card{
-        height: 200px;
+        height: 250px;
         display: flex;
         text-align: center ;
         align-items: center;
+        width: 80%;
         /*background-position: center center; si descomento esta linea queda un diseño mas responsive, la comento ya que son platos preferentes los cuales dudo que se actualicen seguido, optando asi por posicionarlos manualmente*/
         /*background-attachment: fixed; si descomento esta linea, las imagenes quedan fijas y al scrollear se mueven las tarjetas a medida que van recorriendo las imagenes, un efecto muy bueno a tener en cuenta pero debo achicar las imagenes un poco para no perder*/
     }

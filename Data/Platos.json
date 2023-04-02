@@ -28,5 +28,11 @@
         "nombre":"Pollo al verdeo",
         "precio":1000,
         "cat":"Carnes blancas"
+    },
+    {
+        "id":6,
+        "nombre":"1/2 Bife de chorizo",
+        "precio":2100,
+        "cat":"Carnes rojas"
     }
 ]

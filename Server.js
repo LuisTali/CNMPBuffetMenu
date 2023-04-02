@@ -7,7 +7,7 @@ const app = express();
 //app.use(express.static('./index.html'))
 //app.use(express.static(path.resolve('./style.css')))
 app.use(express.static(path.resolve(__dirname,'./Styles')));
-
+//Chequear como hacer andar y que carguen los recursos de estilos
 
 app.get('/',(req,res)=>{
     res.sendFile(path.resolve('./index.html'))

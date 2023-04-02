@@ -66,7 +66,7 @@ nav li a:hover{
     margin-top: 100px;
     z-index: -999;
     width: 100%;
-    
+    justify-content: space-around;
 }
 
 .categorias li{
@@ -249,11 +249,39 @@ button{
     align-items: center;
 }
 
+.menu .categoria ul li button img{
+    width: 24px; height: 24px;
+}
+
 .categoria h3{
     text-decoration:underline;
     text-decoration-color: red;
     color: rgb(0, 0, 113);
     
+}
+
+#details{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#order{
+    height: 30px;
+}
+
+#subtotal{
+    margin: 10px 30px;
+    width: 100px;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    background: none;
+}
+
+#subtotal::placeholder{
+    color: black;
+    font-weight: 600;
 }
 
 @media screen and (max-width:829px){
@@ -327,10 +355,10 @@ button{
         /*background-attachment: fixed; si descomento esta linea, las imagenes quedan fijas y al scrollear se mueven las tarjetas a medida que van recorriendo las imagenes, un efecto muy bueno a tener en cuenta pero debo achicar las imagenes un poco para no perder*/
     }
 
-    .card1{background-position: 0px -50px;}
-    .card2{background-position: 0px -200px;}
-    .card3{background-position: 0px -140px;}
-    .card5{background-position: 0px -100px;}
+    .card1{background-position: 0px -30px;}
+    .card2{background-position: 0px -100px;}
+    .card3{background-position: 0px -70px;}
+    .card5{background-position: 0px -30px;}
 
     .container .container-aside{
         display: flex;

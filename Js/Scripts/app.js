@@ -27,25 +27,26 @@ const orderBtn = document.getElementById('order')
 
 //Al cliquear Edit se muestra la seccion para ingresar la info del plato del dia
 editInfo.addEventListener('click',() => {
+    editInfoDiv.classList.remove('isInactive');
     mainDiv.classList.add('isInactive');
     categoriesDiv.classList.add('isInactive');
-    editInfoDiv.classList.remove('isInactive');
 })
 
 //Al cliquear Edit en la seccion de info del plato del dia se muestra el index con la info actualizada
 editBtn.addEventListener('click',() => {
-    let nombrePlatoDia = document.getElementById('inputPlatoDia').value;
-    let descriptionPlatoDia = document.getElementById('descripcionPlatoDia').value;
 
+    let nombrePlato = document.getElementById('inputPlatoDia').value;
+    let descriptionPlato = document.getElementById('descripcionPlatoDia').value;
+
+    let platoDia = document.getElementById('nombrePDia'); 
+    let descripcionPlatoDia = document.getElementById('descripcionPDia');
+    platoDia.textContent=nombrePlato;
+    descripcionPlatoDia.textContent = descriptionPlato;
+    
+    editInfoDiv.classList.add('isInactive');
     mainDiv.classList.remove('isInactive');
     categoriesDiv.classList.remove('isInactive');
-    editInfoDiv.classList.add('isInactive');
-    
-    console.log(nombrePlatoDia + ', Nombre plato');
-    console.log(descriptionPlatoDia + ', Descripcion plato');
-
-    document.getElementById('nombrePDia').innerHTML=nombrePlatoDia;
-    document.getElementById('descripcionPDia').innerHTML = descriptionPlatoDia;
+    return false;
     }
 )
 

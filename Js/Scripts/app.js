@@ -106,6 +106,8 @@ const agregarCarrito = (plato) =>{
 
 //Al realizar la orden el subtotal vuelve a 0
 orderBtn.addEventListener('click',(event)=>{
+    carrito = [];
+    subTotal = 0;
     inputSubT.setAttribute('placeholder',``);
 })
 
@@ -135,9 +137,11 @@ const cargarPlatosCreate = async() => {
                 h4.textContent = plato.nombre;
 
                 let button = document.createElement('button');
+                button.classList.add('buttonShop');
                 button.textContent = `$${plato.precio}`;
                 button.setAttribute('value',plato.id); 
-                button.addEventListener('click',()=>{console.log(`boton cliqueado ${button.value}`);agregarCarrito(plato)})
+                button.onclick = () => agregarCarrito(plato)
+                //button.addEventListener('click',()=>{console.log(`boton cliqueado ${button.value}`);agregarCarrito(plato)})
 
                 let shoppingCartImg = document.createElement('img');
                 shoppingCartImg.setAttribute('src',"./Iconos/shoppingCart/apple-touch-icon.png")

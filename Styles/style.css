@@ -249,6 +249,10 @@ button{
     align-items: center;
 }
 
+.menu .categoria ul li button:active{
+    background-color: rgb(200, 200, 200);
+}
+
 .menu .categoria ul li button img{
     width: 24px; height: 24px;
 }

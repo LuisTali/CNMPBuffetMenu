@@ -59,14 +59,6 @@ const agregarCarrito = (plato) =>{
     console.log(carrito);
 }
 
-//Al realizar la orden el subtotal vuelve a 0
-orderBtn.onclick = ()=>{
-    console.log('Carrito Vaciado, Orden pedida, Subtotal restaurado a 0');
-    inputSubT.setAttribute('placeholder',"$0");
-    carrito = [];
-    subTotal = 0;
-}
-
 const cargarPlatosCreate = async() => {
     let respuesta = await fetch('./Data/food.json');
     let platos = await respuesta.json();
@@ -91,15 +83,19 @@ const cargarPlatosCreate = async() => {
                     let platoItem = document.createElement('li');           
                     let h4 = document.createElement('h4');
                     h4.textContent = plato.nombre;          
+                    
+                    /*Comento ya que es un boton sin funcionalidad por el momento
                     let button = document.createElement('button');
                     button.textContent = `$${plato.precio}`;
                     button.setAttribute('value',plato.idPlato); 
                     button.addEventListener('click',()=>{console.log(`boton cliqueado ${button.value}`);agregarCarrito (plato)})       
                     let shoppingCartImg = document.createElement('img');
                     shoppingCartImg.setAttribute('src',"./Iconos/shoppingCart/apple-touch-icon.png")
-                    button.appendChild(shoppingCartImg);            
+                    button.appendChild(shoppingCartImg);*/            
+                    
                     platoItem.appendChild(h4);
-                    platoItem.appendChild(button);
+
+                    //platoItem.appendChild(button);
 
                     listaCat.appendChild(platoItem);
                 } 

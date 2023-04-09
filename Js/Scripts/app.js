@@ -67,12 +67,6 @@ orderBtn.onclick = ()=>{
     subTotal = 0;
 }
 
-orderBtn.addEventListener('click',(event)=>{
-    carrito = [];
-    subTotal = 0;
-    inputSubT.setAttribute('placeholder',``);
-})
-
 const cargarPlatosCreate = async() => {
     let respuesta = await fetch('./Data/food.json');
     let platos = await respuesta.json();
@@ -116,10 +110,6 @@ const cargarPlatosCreate = async() => {
 
 }
 
-    const obtenerFoodFile = async() =>{
-        //console.log(path.join(__dirname));
-        //fs.readFile(path.join(__dirname))
-    }
     cargarPlatosCreate()
     obtenerFoodFile()
 }

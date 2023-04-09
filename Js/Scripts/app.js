@@ -68,6 +68,8 @@ orderBtn.onclick = ()=>{
 }
 
 orderBtn.addEventListener('click',(event)=>{
+    carrito = [];
+    subTotal = 0;
     inputSubT.setAttribute('placeholder',``);
 })
 

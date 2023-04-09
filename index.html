@@ -4,43 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CNMP Buffet</title>
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     
-    <nav>
-        <label for="" class="logo"><img src="./images/logoCNMP.png" alt=""></label>
+    <nav >
+        <label for="" class="logo" id="top"><img src="./images/logoCNMP.png" alt=""></label>
         <ul>
-            <li><a href="#">HOME</a> </li>
-            <li><a href="#">US</a> </li>                
-            <li><a href="#">CONTACT</a> </li>
-            <li><a href="#" id="editInfo">EDITAR INFO</a> </li>
+            <li><a href="#">HOME</a> </li>                
+            <li><a href="#info">CONTACT</a> </li>
         </ul>    
     </nav>
+   
     <div class="opciones">
         <ul class="categorias">
-            <li><a href="#">Entradas</a> </li>
+            <li><a href="#entradas">Entradas</a> </li>
             <li><a href="#sandwich">Sandwich</a> </li>
             <li><a href="#pescados y mariscos">Pescados y Mariscos</a> </li>
-            <li><a href="#">Pastas</a> </li>
-            <li><a href="#">Carnes Rojas</a> </li>
+            <li><a href="#pastas">Pastas</a> </li>
+            <li><a href="#carnes rojas">Carnes Rojas</a> </li>
             <li><a href="#carnes blancas">Carnes Blancas</a> </li>
-            <li><a href="#">Guarnicion</a> </li>
-            <li><a href="#">Ensaladas</a> </li>
-            <li><a href="#">Arroces</a> </li>
+            <li><a href="#guarnicion">Guarnicion</a> </li>
+            <li><a href="#ensaladas">Ensaladas</a> </li>
+            <li><a href="#arroces">Arroces</a> </li>
             <li><a href="#postres">Postres</a> </li>
-            <li><a href="#">Cafeteria</a></li>
-            <li><a href="#">Bebidas</a></li>
-            <li><a href="#">Cervezas</a></li>
-            <li><a href="#">Menu Infantil</a></li>
+            <li><a href="#cafeteria">Cafeteria</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+            <li><a href="#cervezas">Cervezas</a></li>
+            <li><a href="#menu infantil">Menu Infantil</a></li>
         </ul>
     </div>
     <div class="container" id="infoDiv">
@@ -86,9 +85,7 @@
         </div>
 
         <div class="container-aside">
-                <h2>Menu del Dia</h2>
-                <p id="nombrePDia">Nombre plato del dia</p>
-                <p id="descripcionPDia">Descripcion</p>
+                <p id="nombrePDia">Los Tres Salinas</p>
         </div>
 
         <hr id="lineaMoviles">
@@ -98,21 +95,19 @@
 
     <div class="menu">
         
-        <div class="categoria">
+        <div class="categoria" id="entradas">
             <h3>Entradas</h3>
         </div>
         
         <div class="categoria" id="sandwich">
             <h3>Sandwich</h3>
-            
         </div>
         
         <div class="categoria" id="pescados y mariscos">
-            <h3>Pescados y Mariscos</h3>
-            
+            <h3>Pescados y Mariscos</h3> 
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="pastas">
             <h3>Pastas</h3>
         </div>
         
@@ -124,15 +119,15 @@
             <h3>Carnes Blancas</h3>
         </div>
         
-        <div class="categoria" id="guarniciones">
+        <div class="categoria" id="guarnicion">
             <h3>Guarnicion</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="ensaladas">
             <h3>Ensaladas</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="arroces">
             <h3>Arroces</h3>
         </div>
         
@@ -140,19 +135,19 @@
             <h3>Postres</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="cafeteria">
             <h3>Cafeteria</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="bebidas">
             <h3>Bebidas</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="cervezas">
             <h3>Cervezas</h3>
         </div>
         
-        <div class="categoria">
+        <div class="categoria" id="menu infantil">
             <h3>Menu Infantil</h3>
         </div>
     </div>
@@ -161,33 +156,20 @@
         <button class="" id="order">
             <span>ORDER</span>
         </button>
-        <input type="text" disabled="true" id="subtotal">
+        <input type="text" disabled="true" id="subtotal" placeholder="$0">
     </div>
     
-
-    <!--Seccion para editar el plato del dia-->
-    <div class="editInfo isInactive" id="editInfoDiv">
-        <h3>Editar Plato del Dia</h3>
-        <form action="#">
-            <div class="inputDiv">
-                <label for="">Plato del dia</label>
-                <input id="inputPlatoDia"type="text" placeholder="nombre del plato del dia" onkeyup="myFunctionName()">
-            </div>
-            <textarea name="" id="descripcionPlatoDia" cols="30" rows="10" placeholder="Descripcion del plato" onkeyup=""></textarea>
-
-            <!--No se que tan mal esta colocar esto dentro de un form el cual no tiene mas utilidad que indicar que aqui se presenta un formulario, quizas al usar Node y actualizar el plato del dia eligiendolo desde un menu desplegable si necesite usar un Method en el form pero por ahora no-->
-            <div class="presentacionPrevia">
-                <h3>Presentacion previa</h3>
-                <h4 id="presentacionNombre">Nombre plato dia</h4>
-                <p id="presentacionDesc">Descripcion plato dia</p>
-            </div>
-            
-            <button id="edit">EDIT</button>
-
-        </form>
+    <footer>
+        <h3>Creado por <b>Luis Taliercio</b></h3>
+        <h2><a href="https://github.com/LuisTali" target="_blank">Clickea para visitar mi perfil en GitHub <img src="/Iconos/github.png" alt="" style="height: 25px; width:25px"></a></h2>
+        
+        <div class="info" id="info">
+            <div class="dato"><label for="">Telefono:</label><p> 480-6167</p></div>
+            <div class="dato"><label for="">Direccion:</label><p> Av. Altair Espigón C</p></div>
+             
+        </div>
+    </footer>
     
-    </div>
-
     <script  type='module' src="Js/Scripts/app.js"></script>
 </body>
 </html>

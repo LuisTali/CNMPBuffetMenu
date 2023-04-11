@@ -249,7 +249,7 @@ footer label{
 }
 /*Fin estilos Footer.handlebars*/
 
-@media screen and (max-width:414px){
+@media screen and (max-width:415px){
     body{
         overflow-y: scroll;
     }
